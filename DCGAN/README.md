@@ -17,7 +17,7 @@ This file is meant to be executed if the objective is to train a network, it con
 - ***Training loop***: Training loop in order to train the network.
 - ***Variable definition***: All the variables such as the channels of the images, batch size, size of the images, learning rate, number of epochs... are defined in this file.
 
-### Get loader
+### Get_loader
 
 In this file the images are downloaded and the dataloader is created with a single function  
 
@@ -34,7 +34,7 @@ In the utils file we have 3 different functions:
 - `plot_losses`: This function plots the losses for both sections of the model, generator and discriminator.
 - `animations`: This function shows the animation on how the generator changes its generations trough the different epochs.
 
-### Notebook DCGAN
+### Notebook_DCGAN
 
 Python notebook where all the process is explained and where people can give a try to the model without a lot of complications.
 
