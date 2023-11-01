@@ -3,6 +3,7 @@ import torch
 import torchvision
 
 def get_loader():
+  #Create the dataloader, in this case the MNIST fashion data.
   transform=transforms.Compose([
                                 transforms.Resize(image_size),
                                 transforms.CenterCrop(image_size),
