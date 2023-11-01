@@ -28,7 +28,7 @@ if __name__ == "__main__":
   device = torch.device("cuda" if (torch.cuda.is_available()) else "cpu")
 
   #Getting the loader
-  dataloader = get_loader()
+  dataloader = get_loader(image_size, batch_size)
   real_batch = next(iter(dataloader))
   
   #Define the disciminator and apply the initial weights
