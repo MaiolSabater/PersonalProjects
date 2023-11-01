@@ -6,10 +6,10 @@ This folder contains the different code and files along with a notebook explaini
 ## Files
 
 - [main.py](#Main)
-- [get_loader.py](#Get loader)
+- [get_loader.py](#Get_loader)
 - [model.py](#Model)
 - [utils.py](#Utils)
-- [DCGAN.ipynb](#Notebook DCGAN)
+- [DCGAN.ipynb](#Notebook_DCGAN)
 
 ### Main
 
