@@ -3,7 +3,7 @@ from torch import nn
 
 class Discriminator(nn.Module):
     def __init__(self):
-        super(Discriminator, self).__init__()
+        super(Discriminator, self).__init__() #The notations on the side of each Conv2d is the output size of each convolution in the format C H W.
         self.modelCNN = nn.Sequential(
             nn.Conv2d(in_channels=1, out_channels= 64, kernel_size = 4, padding = 1, stride =2  ), # 64 32 32
             nn.LeakyReLU(0.2, inplace=True),
@@ -25,7 +25,7 @@ class Discriminator(nn.Module):
 
 class Generator(nn.Module):
     def __init__(self):
-        super(Generator, self).__init__()
+        super(Generator, self).__init__() #The notations on the side of each Conv2d is the output size of each convolution in the format C H W.
         self.model = nn.Sequential( # 256 100 1 1
             nn.ConvTranspose2d(in_channels=100, out_channels=256, kernel_size=4, stride=1, padding=0), #512 4 4
             nn.BatchNorm2d(256),
