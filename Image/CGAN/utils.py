@@ -6,6 +6,7 @@ import matplotlib.animation as animation
 from IPython.display import HTML
 
 def weights_init(m):
+    #Initialize the weights according to a normal distribution.
     classname = m.__class__.__name__
     if classname.find('Conv') != -1:
         nn.init.normal_(m.weight.data, 0.0, 0.02)
@@ -14,6 +15,7 @@ def weights_init(m):
         nn.init.constant_(m.bias.data, 0)
 
 def plot_losses(G_losses,D_losses):
+    #Plot both generator and discriminator losses
     plt.figure(figsize=(10,5))
     plt.title("Generator and Discriminator Loss During Training")
     plt.plot(G_losses,label="G")
@@ -24,6 +26,7 @@ def plot_losses(G_losses,D_losses):
     plt.show()
 
 def animations(img_list):
+    #Plot the animations on how the model improves its generations.
     fig = plt.figure(figsize=(8,8))
     plt.axis("off")
     ims = [[plt.imshow(np.transpose(i,(1,2,0)), animated=True)] for i in img_list]
